@@ -4,7 +4,6 @@ const input = document.querySelector('#tarefa');//Campo do texto
 let lista = [];//Guarda o texto digitado
 let itensExcluidos = [localStorage.getItem('lixeira')];
 
-//Bug ao excluir, restaurar e excluir de novo
 
 if(localStorage.getItem('id') == null){
     localStorage.setItem('id',0);
@@ -62,8 +61,8 @@ function mostrarLista(){//Mostra oque foi digitado
 }
 mostrarLista();
 function excluir(pos){//Exclui uma linha
-    if(confirm('Tem certeza que quer excluir essa tarefa?')){
-        itensExcluidos.push(localStorage.getItem(pos));//O problema é aqui.Pois ele faz esse push e muda a lixeira, porem o Array de itensExcluidos está sempre recuperando a lixeira.
+    if(confirm('Tem certeza que quer excluir essa tarefa?')){//Confirma se a linha deve ser excluida.
+        itensExcluidos.push(localStorage.getItem(pos));//Adiciona o item excluido na lista de excluidos.
         localStorage.setItem('lixeira',itensExcluidos);
         localStorage.removeItem(pos);
         mostrarLista();
