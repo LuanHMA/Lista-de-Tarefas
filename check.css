@@ -1,0 +1,108 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background: rgb(39, 38, 38);
+}
+main{
+    display: flex;
+}
+.alerta{
+    background: rgb(59, 59, 59);
+    text-align: center;
+    color: #ffffff;
+}
+.alerta p{
+    font-size: 20px;
+    font-family: 'Calibri';
+    margin-right: 2px;
+    font-weight: bold;
+}
+.alerta label{
+    font-weight: 400;
+}
+.container{
+    display: block;
+    width: 35%;
+    min-width: 490px;
+    margin: 50px auto;
+    box-shadow: 0 0 3px black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Calibri';
+    background:#ffff;
+}
+@media (max-width: 500px){
+    .container{
+        width: 96%;
+    }
+}
+#conteudo{
+    display: block;
+}
+#lixeira{
+    display: none;
+}
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+label{
+    font-size: 20px;
+}
+input{
+    font-size: 18px;
+    cursor: pointer;
+    text-indent: 2px;
+    
+}
+button{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 2px;
+}
+
+.container .tarefa-desc{
+    display: flex;
+}
+ul{
+    padding: 10px 0 0 30px;
+    list-style: none;
+}
+ul li{
+    font-size: 1.3em;
+    word-break: break-all;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul li .bi{
+    cursor: pointer;
+    margin-left: 5px;
+}
+ul li .bi-x-square-fill{
+    color: red;
+} 
+ul li .bi-check-square-fill{
+    color: rgb(9, 160, 9);
+}
+input[type='checkbox']{
+    margin-right: 2px;
+}
+.header-lixeira{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titulo{
+    display: flex;
+}
+button#excluirTodos{
+    margin-bottom: 3px;
+}

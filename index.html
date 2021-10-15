@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div id="conteudo">
+            <h1>Lista de Tarefas</h1>
+            <div class="tarefa-desc">
+                <label>
+                    Itens: <input type="text" id="tarefa" placeholder="Qual o novo item ?">
+                </label>
+                <button onclick="adicionar()" id="adicionar">Adicionar</button>
+                <button onclick="abrirLixeira()" id="lixeira-botao">Lixeira <i class="bi bi-trash-fill"></i></button>
+            </div>
+            <div class="container-lista">
+                <ul id="lista">
+                </ul>
+            </div>
+        </div>
+        <div id="lixeira">
+            <div class="header-lixeira">
+                <div class="titulo">
+                    <i class="bi bi-arrow-left-circle-fill" style="font-size: 30pt; margin-right: 10px; cursor: pointer;" title="Voltar" id="voltar"></i>
+                    <h1>Itens Excluídos:</h1>
+
+                </div>
+                <button id="excluirTodos">Limpar</button>
+                
+            </div>
+            
+            <ul id="lista-excluidos">
+            </ul>
+        </div>
+        
+    </div>
+</body>
+    <script src="localstorage.js" defer></script>
+</html>
